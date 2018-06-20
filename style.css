@@ -6,7 +6,8 @@ body{
     background-color: lightblue;
     
     animation: flash 6s ease infinite alternate;
-
+    -webkit-animation: flash 6s ease infinite alternate;
+    -moz-animation: flash 6s ease infinite alternate;
 }
 
 #background{
@@ -28,6 +29,8 @@ body{
     top: 10px;
     
      animation: flash 2s ease infinite;
+    -webkit- animation: flash 2s ease infinite;
+    -moz- animation: flash 2s ease infinite;
 }
 
 .moveBalls{
@@ -45,6 +48,8 @@ body{
     bottom: 79px;
     
     animation: flash 0.5s ease infinite alternate;
+    -webkit-animation: flash 0.5s ease infinite alternate;
+    -moz-animation: flash 0.5s ease infinite alternate;
 }
 
 .ball2{
@@ -58,6 +63,8 @@ body{
     
     
     animation: flash 1s ease infinite alternate;
+    -webkit-animation: flash 1s ease infinite alternate;
+    -moz-animation: flash 1s ease infinite alternate;
 }
 
 .ball3{
@@ -70,6 +77,8 @@ body{
     bottom: 90px;
     
     animation: flash 1.5s ease infinite alternate;
+    -webkit-animation: flash 1.5s ease infinite alternate;
+    -moz-animation: flash 1.5s ease infinite alternate;
 }
 
 .ball4{
@@ -82,6 +91,8 @@ body{
     bottom: 82px;
     
     animation: flash 0.75s ease infinite alternate;
+    -webkit- animation: flash 0.75s ease infinite alternate;
+    -moz- animation: flash 0.75s ease infinite alternate;
 }
 
 .ball5{
@@ -94,6 +105,8 @@ body{
     bottom: 102px;
     
      animation: flash 0.75s ease infinite alternate;
+    -webkit-animation: flash 0.75s ease infinite alternate;
+    -moz-animation: flash 0.75s ease infinite alternate;
 }
 .ball6{
     width: 20px;
@@ -105,6 +118,8 @@ body{
     bottom: 150px;
     
      animation: flash 0.55s ease infinite alternate;
+    -webkit-animation: flash 0.55s ease infinite alternate;
+    -moz-animation: flash 0.55s ease infinite alternate;
 }
 
 .ball7{
@@ -117,6 +132,8 @@ body{
     bottom: 170px;
     
      animation: flash 0.6s ease infinite alternate;
+    -webkit-animation: flash 0.6s ease infinite alternate;
+    -moz-animation: flash 0.6s ease infinite alternate;
 }
 
 h1 {
@@ -144,11 +161,9 @@ h1 {
 	margin-bottom: 10px;
     
         animation: animation1 2s ease infinite alternate;
+    -webkit-animation: animation1 2s ease infinite alternate;
+    -moz-animation: animation1 2s ease infinite alternate;
 } 
-
-.eyes {
-	
-}
 
 .left_eye, .right_eye { 
 	width: 20px; 
@@ -157,6 +172,8 @@ h1 {
 	background-color: yellow;
     
         animation: animation2 1.5s ease infinite alternate;
+    -webkit-animation: animation2 1.5s ease infinite alternate;
+    -moz-animation: animation2 1.5s ease infinite alternate;
 } 
 
 .left_eye { 
@@ -186,6 +203,8 @@ h1 {
     
     
      animation: animation1 2s ease infinite alternate;
+    -webkit-animation: animation1 2s ease infinite alternate;
+    -moz-animation: animation1 2s ease infinite alternate;
 } 
 
 .left_arm, .right_arm { 
@@ -200,9 +219,9 @@ h1 {
     position: relative;
     left: 30px;
 
-
-    
     animation: spin 0.75s linear infinite alternate;
+    -webkit-animation: spin 0.75s linear infinite alternate;
+    -moz-animation: spin 0.75s linear infinite alternate;
 } 
 
 .right_arm { 
@@ -212,6 +231,8 @@ h1 {
     
     
     animation: spin2 1s linear infinite alternate;
+    -webkit-animation: spin2 1s linear infinite alternate;
+    -moz-animation: spin2 1s linear infinite alternate;
 } 
 
 
@@ -228,6 +249,8 @@ h1 {
 	margin: 0 auto;
     
     animation: animation1 2s ease infinite alternate;
+    -webkit-animation: animation1 2s ease infinite alternate;
+    -moz-animation: animation1 2s ease infinite alternate;
 } 
 
 
@@ -244,6 +267,8 @@ h1 {
 	margin-left: 45px; 
     
     animation: rotate 2s ease infinite alternate;
+    -webkit-animation: rotate 2s ease infinite alternate;
+    -moz-animation: rotate 2s ease infinite alternate;
 } 
 
 
@@ -253,39 +278,101 @@ h1 {
     position: relative;
     left: 90px;
     top: -119px;
+    
     animation: rotate 1.0s ease infinite alternate;
+    -webkit-animation: rotate 1.0s ease infinite alternate;
+    -moz-animation: rotate 1.0s ease infinite alternate;
 }
 
 /* ### ANIMATIONS ### */
 
-
+    /* ### Move Back and forth ### */
+@-webkit-keyframes animation1{
+      0% {transform: translateX(-100px);}
+    100% {transform: translateX(200px);}
+}
+@-moz-keyframes animation1{
+      0% {transform: translateX(-100px);}
+    100% {transform: translateX(200px);}
+}
 @keyframes animation1 {
     0%   {transform: translateX(-100px);}
     100% {transform: translateX(200px);}
 }
 
+    /* ### Move Eyes ### */
+@-webkit-keyframes animation2{
+    0%   {transform: translateX(0px);}
+    100% {transform: translateX(40px);}
+}
+@-moz-keyframes animation2{
+    0%   {transform: translateX(0px);}
+    100% {transform: translateX(40px);}
+}
 
 @keyframes animation2{
     0%   {transform: translateX(0px);}
     100% {transform: translateX(40px);}
 }
 
+    /* ### Move Left Arm ### */
+@-webkit-keyframes spin { 
+    0% {transform: rotate (-20deg);}
+    100% {transform: rotate(60deg); } 
+}
+@-moz-keyframes spin { 
+    0% {transform: rotate (-20deg);}
+    100% {transform: rotate(60deg); } 
+}
 @keyframes spin { 
     0% {transform: rotate (-20deg);}
     100% {transform: rotate(60deg); } 
 }
 
+    /* ### Move Right Arm ### */
+@-webkit-keyframes spin2 {
+     0% {transform: rotate (20deg);}
+    100% {transform: rotate(-60deg); } 
+}
+@-moz-keyframes spin2 {
+     0% {transform: rotate (20deg);}
+    100% {transform: rotate(-60deg); } 
+}
 @keyframes spin2 {
      0% {transform: rotate (20deg);}
     100% {transform: rotate(-60deg); } 
 }
 
+    /* ### Move Both Legs ### */
+@-webkit-keyframes rotate{
+    0% {transform: rotate (0deg);}
+    50% {transform: rotate(30deg); }
+    100% {transform: rotate(-30deg); } 
+}
+@-moz-keyframes rotate{
+    0% {transform: rotate (0deg);}
+    50% {transform: rotate(30deg); }
+    100% {transform: rotate(-30deg); } 
+}
 @keyframes rotate{
     0% {transform: rotate (0deg);}
     50% {transform: rotate(30deg); }
     100% {transform: rotate(-30deg); } 
 }
 
+    /* ### Disco Ball Lights ### */
+@-webkit-keyframes flash{
+    0%{background: #92f4e2; }
+    25% {background: #d67bfc;}
+    50% {background: #eaf492; }
+    100%{background: #f49292; }
+}
+@-moz-keyframes flash{
+    0%{background: #92f4e2; }
+    25% {background: #d67bfc;}
+    50% {background: #eaf492; }
+    100%{background: #f49292; }
+}
 @keyframes flash{
     0%{background: #92f4e2; }
     25% {background: #d67bfc;}
