@@ -1,0 +1,295 @@
+
+body{ 
+    height: 100%;
+    width: 100%;
+    margin: 0 auto; 
+    background-color: lightblue;
+    
+    animation: flash 6s ease infinite alternate;
+
+}
+
+#background{
+    margin: 0;
+    background: url(floor-1-trans.png) center no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+
+.disco{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: grey;
+    position: relative;
+    left: 250px;
+    top: 10px;
+    
+     animation: flash 2s ease infinite;
+}
+
+.moveBalls{
+    position: relative;
+    top: 90px;
+    right: 250px
+}
+.ball1{
+    width: 20px;
+    height: 20px; 
+    border-radius: 100%;
+    background: red;
+    position: relative;
+    left: 272px;
+    bottom: 79px;
+    
+    animation: flash 0.5s ease infinite alternate;
+}
+
+.ball2{
+    width: 20px;
+    height: 20px; 
+    border-radius: 100%;
+    background: blue;
+    position: relative;
+    left: 310px;
+    bottom: 98px;
+    
+    
+    animation: flash 1s ease infinite alternate;
+}
+
+.ball3{
+    width: 20px;
+    height: 20px; 
+    border-radius: 100%;
+    background: purple;
+    position: relative;
+    left: 325px;
+    bottom: 90px;
+    
+    animation: flash 1.5s ease infinite alternate;
+}
+
+.ball4{
+    width: 20px;
+    height: 20px; 
+    border-radius: 100%;
+    background: purple;
+    position: relative;
+    left: 310px;
+    bottom: 82px;
+    
+    animation: flash 0.75s ease infinite alternate;
+}
+
+.ball5{
+    width: 20px;
+    height: 20px; 
+    border-radius: 100%;
+    background: purple;
+    position: relative;
+    left: 273px;
+    bottom: 102px;
+    
+     animation: flash 0.75s ease infinite alternate;
+}
+.ball6{
+    width: 20px;
+    height: 20px; 
+    border-radius: 100%;
+    background: blue;
+    position: relative;
+    left: 259px;
+    bottom: 150px;
+    
+     animation: flash 0.55s ease infinite alternate;
+}
+
+.ball7{
+    width: 20px;
+    height: 20px; 
+    border-radius: 100%;
+    background: red;
+    position: relative;
+    left: 292px;
+    bottom: 170px;
+    
+     animation: flash 0.6s ease infinite alternate;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+    color: #666;
+}
+
+
+.head, 
+.left_arm, 
+.torso, 
+.right_arm, 
+.left_leg, 
+.right_leg {
+	 background-color: #5f93e8;
+}
+
+
+.head { 
+	width: 200px; 
+	margin: 0 auto; 
+	height: 150px; 
+	border-radius: 200px 200px 0 0; 
+	margin-bottom: 10px;
+    
+        animation: animation1 2s ease infinite alternate;
+} 
+
+.eyes {
+	
+}
+
+.left_eye, .right_eye { 
+	width: 20px; 
+	height: 20px; 
+	border-radius: 15px; 
+	background-color: yellow;
+    
+        animation: animation2 1.5s ease infinite alternate;
+} 
+
+.left_eye { 
+	position: relative; 
+	top: 100px; 
+	left: 40px; 
+} 
+
+.right_eye { 
+	position: relative; 
+	top: 100px; 
+    top: 80px;
+	left: 120px; 
+}
+
+
+.head:hover {
+	width: 300px;
+    transition: 1s ease-in-out;
+}
+
+.upper_body { 
+	width: 440px; 
+	height: 150px;
+	display: flex; 
+    margin: 0 auto;
+    
+    
+     animation: animation1 2s ease infinite alternate;
+} 
+
+.left_arm, .right_arm { 
+	width: 130px; 
+	height:40px;
+	border-radius: 100px;
+
+} 
+
+.left_arm { 
+
+    position: relative;
+    left: 30px;
+
+
+    
+    animation: spin 0.75s linear infinite alternate;
+} 
+
+.right_arm { 
+
+    position: relative;
+    right: 30px;
+    
+    
+    animation: spin2 1s linear infinite alternate;
+} 
+
+
+.torso { 
+	width: 200px; 
+	height: 200px;
+	border-radius: 0 0 50px 50px; 
+}
+
+
+.lower_body { 
+	width: 200px; 
+	height: 200px;
+	margin: 0 auto;
+    
+    animation: animation1 2s ease infinite alternate;
+} 
+
+
+.left_leg, .right_leg { 
+	width: 40px; 
+	height: 120px;
+	border-radius: 0 0 100px 100px; 
+     
+  
+    
+} 
+
+.left_leg { 
+	margin-left: 45px; 
+    
+    animation: rotate 2s ease infinite alternate;
+} 
+
+
+
+.right_leg { 
+	margin-left: 30px; 
+    position: relative;
+    left: 90px;
+    top: -119px;
+    animation: rotate 1.0s ease infinite alternate;
+}
+
+/* ### ANIMATIONS ### */
+
+
+@keyframes animation1 {
+    0%   {transform: translateX(-100px);}
+    100% {transform: translateX(200px);}
+}
+
+
+@keyframes animation2{
+    0%   {transform: translateX(0px);}
+    100% {transform: translateX(40px);}
+}
+
+@keyframes spin { 
+    0% {transform: rotate (-20deg);}
+    100% {transform: rotate(60deg); } 
+}
+
+@keyframes spin2 {
+     0% {transform: rotate (20deg);}
+    100% {transform: rotate(-60deg); } 
+}
+
+@keyframes rotate{
+    0% {transform: rotate (0deg);}
+    50% {transform: rotate(30deg); }
+    100% {transform: rotate(-30deg); } 
+}
+
+@keyframes flash{
+    0%{background: #92f4e2; }
+    25% {background: #d67bfc;}
+    50% {background: #eaf492; }
+    100%{background: #f49292; }
+}
+
